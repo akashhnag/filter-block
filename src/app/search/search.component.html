@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <input type="text" [(ngModel)]="search">
+</div>
+<div class="results">
+  <table style="width:100%;" >
+    <tr *ngFor="let a of row">
+      <td *ngFor="let d of a | filter:search">
+        <div>
+          <ul>
+            <li>Name:{{d.name}}</li>
+            <li>Email:{{d.email}}</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
